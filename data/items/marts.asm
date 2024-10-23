@@ -163,6 +163,8 @@ MartGoldenrod5F4:
 	db TM_ICE_PUNCH
 	db TM_HEADBUTT
 	db TM_ROCK_SMASH
+	db TM_HIDDEN_POWER
+	db TM_DIG
 	db -1 ; end
 
 MartOlivine:
@@ -203,10 +205,10 @@ MartMahogany1:
 MartMahogany2:
 	db 9 ; # items
 	db RAGECANDYBAR
-	db GREAT_BALL
+	db MOOMOO_MILK
 	db SUPER_POTION
 	db HYPER_POTION
-	db ANTIDOTE
+	db FULL_HEAL
 	db PARLYZ_HEAL
 	db SUPER_REPEL
 	db REVIVE
@@ -322,10 +324,16 @@ MartCeladon3F:
 	db -1 ; end
 
 MartCeladon4F:
-	db 3 ; # items
+	db 9 ; # items
 	db POKE_DOLL
 	db LOVELY_MAIL
 	db SURF_MAIL
+	db WATER_STONE
+	db THUNDERSTONE
+	db FIRE_STONE
+	db MOON_STONE
+	db SUN_STONE
+	db LEAF_STONE
 	db -1 ; end
 
 MartCeladon5F1:

@@ -35,12 +35,14 @@ MoveTutor:
 
 .GetMoveTutorMove:
 	ld a, [wScriptVar]
-	cp MOVETUTOR_FLAMETHROWER
+	cp MT01_MOVE
 	jr z, .flamethrower
-	cp MOVETUTOR_THUNDERBOLT
+	cp MT02_MOVE
 	jr z, .thunderbolt
-	; MOVETUTOR_ICE_BEAM
-	ld a, MT03_MOVE ; ICE_BEAM
+	cp MT03_MOVE
+	jr z, .icebeam
+	; MOVETUTOR_ROCK_SLIDE
+	ld a, MT04_MOVE ; ROCK SLIDE
 	ret
 
 .flamethrower
@@ -49,6 +51,10 @@ MoveTutor:
 
 .thunderbolt
 	ld a, MT02_MOVE ; THUNDERBOLT
+	ret
+
+.icebeam
+	ld a, MT03_MOVE ; ICE BEAM
 	ret
 
 CheckCanLearnMoveTutorMove:

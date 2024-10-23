@@ -32,8 +32,8 @@ GoldenrodCityFlypointAndFloriaCallback:
 	endcallback
 
 GoldenrodCityMoveTutorCallback:
-;	checkevent EVENT_BEAT_ELITE_FOUR
-;	iffalse .MoveTutorDone
+	checkflag ENGINE_FOGBADGE
+	iffalse .MoveTutorDone
 	checkitem COIN_CASE
 	iffalse .MoveTutorDisappear
 	iftrue .MoveTutorAppear
@@ -62,33 +62,41 @@ MoveTutorScript:
 	writetext GoldenrodCityMoveTutorAsk4000CoinsOkayText
 	yesorno
 	iffalse .Refused2
-	checkcoins 2000
+	checkcoins 3000
 	ifequal HAVE_LESS, .NotEnoughMoney
 	writetext GoldenrodCityMoveTutorWhichMoveShouldITeachText
 	loadmenu .MoveMenuHeader
 	verticalmenu
 	closewindow
-	ifequal MOVETUTOR_FLAMETHROWER, .Flamethrower
-	ifequal MOVETUTOR_THUNDERBOLT, .Thunderbolt
-	ifequal MOVETUTOR_ICE_BEAM, .IceBeam
+	ifequal 1, .Flamethrower
+	ifequal 2, .Thunderbolt
+	ifequal 3, .IceBeam
+	ifequal 4, .RockSlide
 	sjump .Incompatible
 
 .Flamethrower:
-	setval MOVETUTOR_FLAMETHROWER
+	setval MT01_MOVE
 	writetext GoldenrodCityMoveTutorMoveText
 	special MoveTutor
 	ifequal FALSE, .TeachMove
 	sjump .Incompatible
 
 .Thunderbolt:
-	setval MOVETUTOR_THUNDERBOLT
+	setval MT02_MOVE
 	writetext GoldenrodCityMoveTutorMoveText
 	special MoveTutor
 	ifequal FALSE, .TeachMove
 	sjump .Incompatible
 
 .IceBeam:
-	setval MOVETUTOR_ICE_BEAM
+	setval MT03_MOVE
+	writetext GoldenrodCityMoveTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.RockSlide:
+	setval MT04_MOVE
 	writetext GoldenrodCityMoveTutorMoveText
 	special MoveTutor
 	ifequal FALSE, .TeachMove
@@ -102,10 +110,11 @@ MoveTutorScript:
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
-	db 5 ; items
+	db 6 ; items
 	db "FLAMETHROWER@"
 	db "THUNDERBOLT@"
 	db "ICE BEAM@"
+	db "ROCK SLIDE@"
 	db "CANCEL@"
 
 .Refused:
@@ -123,7 +132,7 @@ MoveTutorScript:
 .TeachMove:
 	writetext GoldenrodCityMoveTutorIfYouUnderstandYouveMadeItText
 	promptbutton
-	takecoins 2000
+	takecoins 3000
 	waitsfx
 	playsound SFX_TRANSACTION
 	special DisplayCoinCaseBalance
@@ -501,7 +510,7 @@ GoldenrodCityMoveTutorAskTeachAMoveText:
 
 GoldenrodCityMoveTutorAsk4000CoinsOkayText:
 	text "It will cost you"
-	line "4000 coins. Okay?"
+	line "3000 coins. Okay?"
 	done
 
 GoldenrodCityMoveTutorAwwButTheyreAmazingText:
