@@ -703,6 +703,5 @@ DEF NUM_NONTRAINER_PHONECONTACTS EQU const_value - 1
 	const EUSINE
 
 DEF KRIS EQU __trainer_class__
- NUM_TRAINER_CLASSES EQU __trainer_class__ - 1
 
 DEF NUM_TRAINER_CLASSES EQU __trainer_class__ - 1

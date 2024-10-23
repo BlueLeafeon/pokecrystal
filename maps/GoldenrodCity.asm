@@ -32,14 +32,16 @@ GoldenrodCityFlypointAndFloriaCallback:
 	endcallback
 
 GoldenrodCityMoveTutorCallback:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iffalse .MoveTutorDone
+;	checkevent EVENT_BEAT_ELITE_FOUR
+;	iffalse .MoveTutorDone
 	checkitem COIN_CASE
 	iffalse .MoveTutorDisappear
-	readvar VAR_WEEKDAY
-	ifequal WEDNESDAY, .MoveTutorAppear
-	ifequal SATURDAY, .MoveTutorAppear
-.MoveTutorDisappear:
+	iftrue .MoveTutorAppear
+;	readvar VAR_WEEKDAY
+;	ifequal MONDAY, .MoveTutorAppear
+;	ifequal WEDNESDAY, .MoveTutorAppear
+;	ifequal SATURDAY, .MoveTutorAppear
+	.MoveTutorDisappear:
 	disappear GOLDENRODCITY_MOVETUTOR
 	endcallback
 
@@ -60,7 +62,7 @@ MoveTutorScript:
 	writetext GoldenrodCityMoveTutorAsk4000CoinsOkayText
 	yesorno
 	iffalse .Refused2
-	checkcoins 4000
+	checkcoins 2000
 	ifequal HAVE_LESS, .NotEnoughMoney
 	writetext GoldenrodCityMoveTutorWhichMoveShouldITeachText
 	loadmenu .MoveMenuHeader
@@ -100,7 +102,7 @@ MoveTutorScript:
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
-	db 4 ; items
+	db 5 ; items
 	db "FLAMETHROWER@"
 	db "THUNDERBOLT@"
 	db "ICE BEAM@"
@@ -121,7 +123,7 @@ MoveTutorScript:
 .TeachMove:
 	writetext GoldenrodCityMoveTutorIfYouUnderstandYouveMadeItText
 	promptbutton
-	takecoins 4000
+	takecoins 2000
 	waitsfx
 	playsound SFX_TRANSACTION
 	special DisplayCoinCaseBalance

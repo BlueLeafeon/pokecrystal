@@ -10,26 +10,26 @@ OddEggProbabilities:
 	table_width 2, OddEggProbabilities
 DEF prob_total = 0
 ; Pichu
-	prob 8
-	prob 1
+	prob 11
+	prob 9 ;12
 ; Cleffa
-	prob 16
-	prob 3
+	prob 6
+	prob 6 ;24
 ; Igglybuff
-	prob 16
-	prob 3
+	prob 6
+	prob 6 ;36
 ; Smoochum
-	prob 14
-	prob 2
+	prob 6
+	prob 6 ;48
 ; Magby
-	prob 10
-	prob 2
+	prob 6
+	prob 6 ;60
 ; Elekid
-	prob 12
-	prob 2
+	prob 6
+	prob 6 ;72
 ; Tyrogue
-	prob 10
-	prob 1
+	prob 11
+	prob 9 ;84
 	assert_table_length NUM_ODD_EGGS
 	assert prob_total == 100, "OddEggProbabilities do not sum to 100%!"
 
@@ -47,7 +47,7 @@ OddEggs:
 	bigdw 0
 	bigdw 0
 	bigdw 0
-	dn 0, 0, 0, 0 ; DVs
+	dn 14, 14, 15, 15 ; DVs
 	db 30, 20, 10, 0 ; PP
 	db 20 ; Step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -73,7 +73,7 @@ OddEggs:
 	bigdw 0
 	bigdw 0
 	bigdw 0
-	dn 2, 10, 10, 10 ; DVs
+	dn 7, 10, 10, 10 ; DVs
 	db 30, 20, 10, 0 ; PP
 	db 20 ; Step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -350,7 +350,7 @@ OddEggs:
 
 	db TYROGUE
 	db NO_ITEM
-	db TACKLE, DIZZY_PUNCH, 0, 0
+	db TACKLE, MACH_PUNCH, HI_JUMP_KICK, 0
 	dw 02560 ; OT ID
 	dt 125 ; Exp
 	; Stat exp
@@ -359,7 +359,7 @@ OddEggs:
 	bigdw 0
 	bigdw 0
 	bigdw 0
-	dn 0, 0, 0, 0 ; DVs
+	dn 15, 15, 15, 15 ; DVs
 	db 35, 10, 0, 0 ; PP
 	db 20 ; Step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -376,7 +376,7 @@ OddEggs:
 
 	db TYROGUE
 	db NO_ITEM
-	db TACKLE, DIZZY_PUNCH, 0, 0
+	db TACKLE, MACH_PUNCH, HI_JUMP_KICK, 0
 	dw 00256 ; OT ID
 	dt 125 ; Exp
 	; Stat exp
@@ -385,7 +385,7 @@ OddEggs:
 	bigdw 0
 	bigdw 0
 	bigdw 0
-	dn 2, 10, 10, 10 ; DVs
+	dn 15, 10, 10, 10 ; DVs
 	db 35, 10, 0, 0 ; PP
 	db 20 ; Step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data

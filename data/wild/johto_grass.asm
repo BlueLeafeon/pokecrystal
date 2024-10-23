@@ -289,7 +289,7 @@ JohtoGrassWildMons:
 	db 14, KOFFING
 	db 15, RATTATA
 	db 14, ZUBAT
-	db 15, RATTATA
+	db 15, CHARMANDER
 	db 15, RATICATE
 	db 15, RATICATE
 	; day
@@ -297,11 +297,11 @@ JohtoGrassWildMons:
 	db 14, KOFFING
 	db 15, RATTATA
 	db 14, ZUBAT
-	db 15, RATTATA
+	db 15, CHARMANDER
 	db 15, RATICATE
 	db 15, RATICATE
 	; nite
-	db 13, RATTATA
+	db 13, HOUNDOUR
 	db 14, KOFFING
 	db 15, RATTATA
 	db 14, ZUBAT
@@ -317,7 +317,7 @@ JohtoGrassWildMons:
 	db 14, KOFFING
 	db 16, KOFFING
 	db 15, ZUBAT
-	db 12, KOFFING
+	db 12, CYNDAQUIL
 	db 16, KOFFING
 	db 16, WEEZING
 	; day
@@ -325,15 +325,15 @@ JohtoGrassWildMons:
 	db 14, KOFFING
 	db 16, KOFFING
 	db 15, ZUBAT
-	db 12, KOFFING
+	db 12, CYNDAQUIL
 	db 16, KOFFING
 	db 16, WEEZING
 	; nite
-	db 14, RATTATA
+	db 14, HOUNDOUR
 	db 14, KOFFING
 	db 16, KOFFING
 	db 15, ZUBAT
-	db 12, KOFFING
+	db 12, HOUNDOUR
 	db 16, KOFFING
 	db 16, WEEZING
 	end_grass_wildmons
@@ -569,7 +569,7 @@ JohtoGrassWildMons:
 	db 5, WEEDLE
 	db 7, METAPOD
 	db 7, KAKUNA
-	db 7, PIDGEY
+	db 7, PIKACHU
 	db 6, PARAS
 	db 6, PARAS
 	; day
@@ -577,7 +577,7 @@ JohtoGrassWildMons:
 	db 5, WEEDLE
 	db 7, METAPOD
 	db 7, KAKUNA
-	db 7, PIDGEY
+	db 7, PIKACHU
 	db 6, PARAS
 	db 6, PARAS
 	; nite
@@ -1325,7 +1325,7 @@ JohtoGrassWildMons:
 	db 5, RATTATA
 	db 7, BELLSPROUT
 	db 6, HOPPIP
-	db 7, PIDGEY
+	db 7, MAREEP
 	db 7, HOPPIP
 	db 7, HOPPIP
 	; day
@@ -1333,7 +1333,7 @@ JohtoGrassWildMons:
 	db 5, RATTATA
 	db 7, BELLSPROUT
 	db 6, HOPPIP
-	db 7, PIDGEY
+	db 7, MAREEP
 	db 7, HOPPIP
 	db 7, HOPPIP
 	; nite
@@ -1381,7 +1381,7 @@ JohtoGrassWildMons:
 	db 11, RATTATA
 	db 12, PIDGEY
 	db 10, ABRA
-	db 12, JIGGLYPUFF
+	db 12, CHIKORITA
 	db 10, DITTO
 	db 10, DITTO
 	; day
@@ -1389,7 +1389,7 @@ JohtoGrassWildMons:
 	db 11, RATTATA
 	db 12, PIDGEY
 	db 10, ABRA
-	db 12, JIGGLYPUFF
+	db 12, BULBASAUR
 	db 10, DITTO
 	db 10, DITTO
 	; nite
@@ -1397,7 +1397,7 @@ JohtoGrassWildMons:
 	db 11, RATTATA
 	db 12, HOOTHOOT
 	db 10, ABRA
-	db 12, JIGGLYPUFF
+	db 12, BULBASAUR
 	db 10, DITTO
 	db 10, DITTO
 	end_grass_wildmons
@@ -1436,16 +1436,16 @@ JohtoGrassWildMons:
 	db 4, LEDYBA
 	db 4, PIDGEY
 	db 5, BELLSPROUT
+	db 5, VULPIX
 	db 5, GROWLITHE
-	db 5, PIDGEY
 	db 6, PIDGEY
 	db 6, PIDGEY
 	; day
 	db 4, PIDGEY
 	db 4, PIDGEY
 	db 5, BELLSPROUT
+	db 5, VULPIX
 	db 5, GROWLITHE
-	db 5, PIDGEY
 	db 6, PIDGEY
 	db 6, PIDGEY
 	; nite
@@ -1464,7 +1464,7 @@ JohtoGrassWildMons:
 	db 13, LEDYBA
 	db 14, GROWLITHE
 	db 15, PIDGEY
-	db 16, GROWLITHE
+	db 16, VULPIX
 	db 15, PIDGEOTTO
 	db 15, LEDIAN
 	db 15, LEDIAN
@@ -1472,7 +1472,7 @@ JohtoGrassWildMons:
 	db 13, PIDGEY
 	db 14, GROWLITHE
 	db 15, PIDGEY
-	db 16, GROWLITHE
+	db 16, VULPIX
 	db 15, PIDGEOTTO
 	db 15, PIDGEY
 	db 15, PIDGEY
@@ -1489,7 +1489,7 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_38
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 16, RATTATA
+	db 16, MANKEY
 	db 16, RATICATE
 	db 16, MAGNEMITE
 	db 16, PIDGEOTTO
@@ -1497,7 +1497,7 @@ JohtoGrassWildMons:
 	db 13, MILTANK
 	db 13, MILTANK
 	; day
-	db 16, RATTATA
+	db 16, MANKEY
 	db 16, RATICATE
 	db 16, MAGNEMITE
 	db 16, PIDGEOTTO
@@ -1505,7 +1505,7 @@ JohtoGrassWildMons:
 	db 13, MILTANK
 	db 13, MILTANK
 	; nite
-	db 16, MEOWTH
+	db 16, MANKEY
 	db 16, RATICATE
 	db 16, MAGNEMITE
 	db 16, NOCTOWL
@@ -1577,7 +1577,7 @@ JohtoGrassWildMons:
 	db 16, PIDGEOTTO
 	db 16, FARFETCH_D
 	db 15, FURRET
-	db 17, RATICATE
+	db 17, GIRAFARIG
 	db 17, FURRET
 	db 17, FURRET
 	; day
@@ -1585,7 +1585,7 @@ JohtoGrassWildMons:
 	db 16, PIDGEOTTO
 	db 16, FARFETCH_D
 	db 15, FURRET
-	db 17, RATICATE
+	db 17, GIRAFARIG
 	db 17, FURRET
 	db 17, FURRET
 	; nite
