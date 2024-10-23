@@ -110,7 +110,7 @@ MoveTutorScript:
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
-	db 6 ; items
+	db 5 ; items
 	db "FLAMETHROWER@"
 	db "THUNDERBOLT@"
 	db "ICE BEAM@"

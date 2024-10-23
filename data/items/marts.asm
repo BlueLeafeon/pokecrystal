@@ -321,6 +321,7 @@ MartCeladon3F:
 	db TM_PROTECT
 	db TM_RAIN_DANCE
 	db TM_SANDSTORM
+	db TM_EARTHQUAKE
 	db -1 ; end
 
 MartCeladon4F:

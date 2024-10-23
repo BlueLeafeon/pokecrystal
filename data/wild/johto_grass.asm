@@ -358,9 +358,9 @@ JohtoGrassWildMons:
 	db 10, WEEDLE
 	; nite
 	db 12, PSYDUCK
-	db 13, HOOTHOOT
+	db 13, MURKROW
 	db 14, SPINARAK
-	db 15, HOOTHOOT
+	db 15, MURKROW
 	db 10, VENONAT
 	db 12, VENONAT
 	db 12, VENONAT
@@ -1410,7 +1410,7 @@ JohtoGrassWildMons:
 	db 13, GROWLITHE
 	db 10, ABRA
 	db 12, JIGGLYPUFF
-	db 10, DITTO
+	db 10, YANMA
 	db 12, YANMA
 	; day
 	db 12, SNUBBULL
@@ -1418,15 +1418,15 @@ JohtoGrassWildMons:
 	db 13, GROWLITHE
 	db 10, ABRA
 	db 12, JIGGLYPUFF
-	db 10, DITTO
+	db 10, YANMA
 	db 12, YANMA
 	; nite
 	db 12, DROWZEE
-	db 14, HOOTHOOT
+	db 14, MURKROW
 	db 13, PSYDUCK
 	db 10, ABRA
 	db 12, JIGGLYPUFF
-	db 10, DITTO
+	db 10, YANMA
 	db 12, YANMA
 	end_grass_wildmons
 
@@ -1450,10 +1450,10 @@ JohtoGrassWildMons:
 	db 6, PIDGEY
 	; nite
 	db 4, SPINARAK
-	db 4, HOOTHOOT
+	db 4, MURKROW
 	db 5, BELLSPROUT
-	db 5, HOOTHOOT
-	db 5, HOOTHOOT
+	db 5, MURKROW
+	db 5, MURKROW
 	db 5, GASTLY
 	db 5, GASTLY
 	end_grass_wildmons
