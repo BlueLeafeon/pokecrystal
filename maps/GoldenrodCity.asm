@@ -471,10 +471,10 @@ GoldenrodCityGameCornerSignText:
 	done
 
 GoldenrodCityNameRaterSignText:
-	text "NAME RATER"
-
-	para "Get Your #MON"
-	line "Nicknames Rated"
+	text "NAME RATER and"
+	line "MOVE REMINDER"
+	para "Fix up your"
+	line "#MON!"
 	done
 
 GoldenrodCityUndergroundSignNorthText:

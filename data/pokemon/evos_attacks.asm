@@ -14,6 +14,8 @@ SECTION "Evolutions and Attacks", ROMX
 
 INCLUDE "data/pokemon/evos_attacks_pointers.asm"
 
+EvosAttacks::
+
 BulbasaurEvosAttacks:
 	db EVOLVE_LEVEL, 16, IVYSAUR
 	db 0 ; no more evolutions
@@ -742,9 +744,9 @@ MankeyEvosAttacks:
 	db 1, LEER
 	db 9, LOW_KICK
 	db 15, KARATE_CHOP
-	db 21, FURY_SWIPES
-	db 27, FOCUS_ENERGY
-	db 33, HI_JUMP_KICK
+	db 21, FOCUS_ENERGY
+	db 28, HI_JUMP_KICK
+	db 33, FURY_SWIPES
 	db 39, CROSS_CHOP
 	db 45, SCREECH
 	db 51, THRASH
@@ -758,8 +760,8 @@ PrimeapeEvosAttacks:
 	db 1, RAGE
 	db 9, LOW_KICK
 	db 15, KARATE_CHOP
-	db 21, FURY_SWIPES
-	db 27, FOCUS_ENERGY
+	db 21, FOCUS_ENERGY
+	db 27, FURY_SWIPES
 	db 28, RAGE
 	db 36, HI_JUMP_KICK
 	db 45, CROSS_CHOP
@@ -1805,7 +1807,8 @@ EeveeEvosAttacks:
 	db 1, TAIL_WHIP
 	db 8, SAND_ATTACK
 	db 16, GROWL
-	db 23, QUICK_ATTACK
+	db 20, QUICK_ATTACK
+	db 25, HEADBUTT
 	db 30, BITE
 	db 36, BATON_PASS
 	db 42, TAKE_DOWN
@@ -1817,7 +1820,8 @@ VaporeonEvosAttacks:
 	db 1, TAIL_WHIP
 	db 8, SAND_ATTACK
 	db 16, WATER_GUN
-	db 23, QUICK_ATTACK
+	db 20, QUICK_ATTACK
+	db 25, BUBBLEBEAM
 	db 30, BITE
 	db 36, AURORA_BEAM
 	db 42, HAZE
@@ -1831,7 +1835,8 @@ JolteonEvosAttacks:
 	db 1, TAIL_WHIP
 	db 8, SAND_ATTACK
 	db 16, THUNDERSHOCK
-	db 23, QUICK_ATTACK
+	db 20, QUICK_ATTACK
+	db 25, SPARK
 	db 30, DOUBLE_KICK
 	db 36, PIN_MISSILE
 	db 42, THUNDER_WAVE
@@ -1845,12 +1850,13 @@ FlareonEvosAttacks:
 	db 1, TAIL_WHIP
 	db 8, SAND_ATTACK
 	db 16, EMBER
-	db 23, QUICK_ATTACK
+	db 20, QUICK_ATTACK
+	db 25, FLAME_WHEEL
 	db 30, BITE
-	db 36, FIRE_SPIN
-	db 42, SMOG
+	db 36, FLAMETHROWER
+	db 42, ROLLING_KICK
 	db 47, LEER
-	db 52, FLAMETHROWER
+	db 52, FIRE_BLAST
 	db 0 ; no more level-up moves
 
 PorygonEvosAttacks:
@@ -2065,10 +2071,12 @@ ChikoritaEvosAttacks:
 	db 1, GROWL
 	db 7, RAZOR_LEAF
 	db 12, REFLECT
+	db 12, LIGHT_SCREEN
 	db 15, POISONPOWDER
+	db 15, LEECH_SEED
 	db 22, SYNTHESIS
 	db 29, BODY_SLAM
-	db 36, LIGHT_SCREEN
+	db 36, GIGA_DRAIN
 	db 43, SAFEGUARD
 	db 50, SOLARBEAM
 	db 0 ; no more level-up moves
@@ -2082,10 +2090,12 @@ BayleefEvosAttacks:
 	db 1, REFLECT
 	db 7, RAZOR_LEAF
 	db 12, REFLECT
+	db 12, LIGHT_SCREEN
 	db 15, POISONPOWDER
+	db 15, LEECH_SEED
 	db 23, SYNTHESIS
 	db 31, BODY_SLAM
-	db 39, LIGHT_SCREEN
+	db 39, GIGA_DRAIN
 	db 47, SAFEGUARD
 	db 55, SOLARBEAM
 	db 0 ; no more level-up moves
@@ -2098,10 +2108,12 @@ MeganiumEvosAttacks:
 	db 1, REFLECT
 	db 8, RAZOR_LEAF
 	db 12, REFLECT
+	db 12, LIGHT_SCREEN
 	db 15, POISONPOWDER
+	db 15, LEECH_SEED
 	db 23, SYNTHESIS
 	db 31, BODY_SLAM
-	db 41, LIGHT_SCREEN
+	db 41, GIGA_DRAIN
 	db 51, SAFEGUARD
 	db 61, SOLARBEAM
 	db 0 ; no more level-up moves
@@ -2659,9 +2671,10 @@ EspeonEvosAttacks:
 	db 1, TAIL_WHIP
 	db 8, SAND_ATTACK
 	db 16, CONFUSION
-	db 23, QUICK_ATTACK
+	db 20, QUICK_ATTACK
+	db 25, PSYBEAM
 	db 30, SWIFT
-	db 36, PSYBEAM
+	db 36, REFLECT
 	db 42, PSYCH_UP
 	db 47, PSYCHIC_M
 	db 52, MORNING_SUN
@@ -2673,9 +2686,10 @@ UmbreonEvosAttacks:
 	db 1, TAIL_WHIP
 	db 8, SAND_ATTACK
 	db 16, PURSUIT
-	db 23, QUICK_ATTACK
+	db 20, QUICK_ATTACK
+	db 25, FAINT_ATTACK
 	db 30, CONFUSE_RAY
-	db 36, FAINT_ATTACK
+	db 36, SCREECH
 	db 42, MEAN_LOOK
 	db 47, CRUNCH
 	db 52, MOONLIGHT
@@ -2684,11 +2698,14 @@ UmbreonEvosAttacks:
 MurkrowEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, PECK
-	db 11, PURSUIT
-	db 16, HAZE
-	db 26, NIGHT_SHADE
-	db 31, FAINT_ATTACK
-	db 41, MEAN_LOOK
+	db 1, LEER
+	db 6, PURSUIT
+	db 11, HAZE
+	db 18, NIGHT_SHADE
+	db 26, FAINT_ATTACK
+	db 31, DRILL_PECK
+	db 36, MEAN_LOOK
+	db 41, CRUNCH
 	db 0 ; no more level-up moves
 
 SlowkingEvosAttacks:
